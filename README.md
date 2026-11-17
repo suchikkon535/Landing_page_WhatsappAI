@@ -20,6 +20,12 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Contact page and API
+
+The contact form is available at `/contact`. `POST /api/contact` validates and saves submissions to `data/contact-submissions.json` in the project directory. `GET /api/contact` returns those submissions and requires an `Authorization: Bearer <token>` header; configure the token in `CONTACT_API_TOKEN` on the server. The GET endpoint returns `503` until that variable is set.
+
+The JSON file store is intended for local development or a single persistent Node.js server. It is not suitable for serverless or multi-instance production deployments, where a shared database or other durable store should be configured instead.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
