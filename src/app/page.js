@@ -1,20 +1,14 @@
 "use client";
 
-import Topography from '../components/Topography';
 import Navbar from "../components/Navbar";
-import IntegrationsTrust from '@/components/IntegrationsTrust';
 import ProblemSection from '@/components/ProblemSection';
 import SolutionsSection from '@/components/SolutionsSection';
-import FeaturesSection from '@/components/FeaturesSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
-import ProductDemoSection from '@/components/ProductDemoSection';
 import IndustriesSection from '@/components/IndustriesSection';
 import PricingSection from '@/components/PricingSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import FAQSection from '@/components/FAQSection';
-import FinalCTASection from '@/components/FinalCTASection';
 import Footer from '@/components/Footer';
 import { ArrowRight, Zap, Play, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -36,23 +30,15 @@ export default function Home() {
         }
       `}</style>
 
-      {/* Animated Crimson Topography Background */}
-      <div className="fixed inset-0 z-0 opacity-40 pointer-events-none">
-        <Topography
-          color="#10b981"
-          lineCount={22}
-          lineWidth={1.2}
-          elevation={1}
-          foreground={0.2}
-          tilt={32}
-          speed={0.2}
-          direction="forward"
-          glow={0.8}
-          depthOfField={0.4}
-          fog={0.4}
-          hoverEffect="lift"
-          clickEffect="pulse"
-          className="w-full h-full"
+      {/* Background Image */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <Image
+          src="/backgroundimage.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-40"
         />
       </div>
 
